@@ -148,6 +148,11 @@ div {
 	background-size: 167px 130px;
 }
 
+.projbnb {
+	background-image: url('../img/bnb.jpg');
+	background-size: 167px 130px;
+}
+
 .projrfprod {
 	background-image: url('../img/proj-rfprod.jpg');
 	background-size: 167px 130px;
