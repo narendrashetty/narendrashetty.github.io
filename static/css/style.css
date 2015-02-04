@@ -7,7 +7,7 @@ html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,abbr,address
 
 body {
 	color: #045858;
-	background-color: #f2f2f2;
+	background-color: #fff;
 	font-family: 'Open Sans', sans-serif;
 	font-size: 14px;
 }
@@ -20,7 +20,6 @@ div {
 	position: relative;
 	width: 100%;
 	background: #fff;
-	box-shadow: 0px 0px 15px #c2c2c2;
 	height: 100%;
 }
 
@@ -38,7 +37,7 @@ div {
 	color: #313131;
 	font-weight: 800;
 	font-size: 28px;
-	margin-bottom: 35px;
+	margin-bottom: 25px;
 	display: inline-block;
 }
 
@@ -46,7 +45,7 @@ div {
 	display: inline-block;
 	position: relative;
 	top: -10px;
-	margin-left: 25px;
+	margin-left: 15px;
 }
 
 .morceCode .GMorce {
@@ -93,7 +92,7 @@ div {
 
 .recentProjectsContainer .title {
 	font-weight: bold;
-	margin-top: 50px;
+	margin-top: 40px;
 }
 
 .recentProjectsContainer .projList li {
@@ -105,9 +104,15 @@ div {
 	margin-right: 50px;	
 }
 
-.recentProjectsContainer .projList li .projName {
+.recentProjectsContainer .projList li a {
+	text-decoration: none;
+}
+
+.recentProjectsContainer .projList li a .projName {
 	font-size: 13px;
 	margin: 10px 0;
+	color: #045858;
+	line-height: 1.3em;
 }
 
 .recentProjectsContainer .projList li .projHash {
@@ -160,7 +165,6 @@ div {
 }
 
 .socialList a {
-	/*background-color: #d8d8d8;*/
 	display: inline-block;
 	border-radius: 50%;
 	padding: 6px;
@@ -174,11 +178,79 @@ div {
 .container .heroImage {
 	overflow: hidden;
 	position: fixed;
-	height: 100vh;
+	width: 250px;
+	height: 100%;
 	text-align: right;
 	right: 0;
+	background-image: url('../img/avatar_small.jpg');
+	background-size: cover;
+	box-shadow: 0px 0px 10px #CDCDCD;
+}
+
+.container .heroImage-mobile {
+	background-image: url('../img/avatar.jpg');
+	background-size: cover;
+	box-shadow: 0px 0px 15px #CDCDCD;
+	width: 70vw;
+	height: 350px;
+	float: none;
+	display: none;
+	margin: 0 auto;
+	border: 5px solid #fff;
+	border-radius: 4px;
+	margin-top: 40px;
 }
 
 .container .heroImage img {
 	height: 100vh;
+}
+
+@media only screen and (max-width: 1000px) {
+	.container .pageBody {
+		width: 100%;
+		text-align: center;
+		padding: 0px;
+		padding-top: 20px;
+	}
+	.column.heroImage {
+		display: none;
+	}
+	.container .heroImage-mobile {
+		display: block;
+	}
+	.container .pageBody .myname {
+		margin-left: -112px;
+	}
+}
+
+@media only screen and (min-width: 846px) and (max-width: 1000px) {
+	.recentProjectsContainer .projList li:nth-child(4) {
+		margin-right: 0px;
+	}
+}
+
+@media only screen and (min-width: 621px) and (max-width: 845px) {
+	.recentProjectsContainer .projList li:nth-child(3n) {
+		margin-right: 0px;
+	}
+}
+
+@media only screen and (min-width: 396px) and (max-width: 620px) {
+	.recentProjectsContainer .projList li:nth-child(2n) {
+		margin-right: 0px;
+	}
+}
+
+@media only screen and (max-width: 395px) {
+	.recentProjectsContainer .projList li {
+		margin-right: 0px;
+		display: block;
+		margin: 20px auto;
+	}
+	.morceCode {
+		display: none;
+	}
+	.container .pageBody .myname {
+		margin-left: 0px;
+	}
 }
